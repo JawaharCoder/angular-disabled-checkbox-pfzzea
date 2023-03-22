@@ -1,0 +1,59 @@
+<input
+  id="cb_note_{{ note.Id }}"
+  type="checkbox"
+  (change)="toggleNoteState(note)"
+  [checked]="isNoteChecked(note)"
+  [disabled]="ReadOnlyStyleGuideNotes"
+/>
+<label attr.for="cb_note_{{ note.Id }}"> edit </label>
+
+<input
+  id="cb_note_1{{ note.Id }}"
+  type="checkbox"
+  (change)="toggleNoteState(note)"
+  [checked]="true"
+  [(ngModel)]="Note1Checked"
+/>
+<label attr.for="cb_note_1{{ note.Id }}"> Note 1 </label>
+
+<input
+  id="cb_note_2{{ note.Id }}"
+  type="checkbox"
+  (change)="toggleNoteState(note)"
+  [checked]="Note1Checked"
+  [disabled]="Note1Checked"
+/>
+<label
+  attr.for="cb_note_2{{ note.Id }}"
+  [ngStyle]="Note1Checked && { color: 'gray' }"
+>
+  Note 2
+</label>
+
+<input
+  id="cb_note_3{{ note.Id }}"
+  type="checkbox"
+  (change)="toggleNoteState(note)"
+  [checked]="Note1Checked"
+  [disabled]="Note1Checked"
+/>
+<label
+  attr.for="cb_note_3{{ note.Id }}"
+  [ngStyle]="Note1Checked && { color: 'gray' }"
+>
+  Note 3
+</label>
+
+<input
+  id="cb_note_4{{ note.Id }}"
+  type="checkbox"
+  (change)="toggleNoteState(note)"
+  [checked]="Note1Checked"
+  [disabled]="Note1Checked"
+/>
+<label
+  attr.for="cb_note_4{{ note.Id }}"
+  [ngStyle]="Note1Checked && { color: 'gray' }"
+>
+  Note 4
+</label>
